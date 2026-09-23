@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Deine Art ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "DM Sans", sans-serif;
+            background: #0d0d12;
+            color: white;
+        }
+
+        .background {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .glow {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.18;
+        }
+
+        .glow-one {
+            background: #ff4f81;
+            top: -200px;
+            left: -150px;
+        }
+
+        .glow-two {
+            background: #8b5cf6;
+            bottom: -250px;
+            right: -150px;
+        }
+
+        main {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 750px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 50px;
+            color: #9999a8;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back:hover {
+            color: white;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.045);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 28px;
+            padding: 50px;
+        }
+
+        .icon {
+            font-size: 42px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(40px, 7vw, 65px);
+            margin-bottom: 30px;
+        }
+
+        h1 span {
+            color: #ff6f9d;
+        }
+
+        p {
+            color: #c7c7d1;
+            font-size: 19px;
+            line-height: 2;
+        }
+
+        .next {
+            display: inline-flex;
+            margin-top: 40px;
+            padding: 15px 28px;
+            border-radius: 50px;
+            background: #ff5f8f;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .next:hover {
+            transform: translateY(-3px);
+            background: #ff719d;
+        }
+
+        @media (max-width: 600px) {
+
+            main {
+                padding: 25px 18px;
+                align-items: flex-start;
+            }
+
+            .back {
+                margin-bottom: 30px;
+            }
+
+            .content {
+                padding: 30px 24px;
+                border-radius: 22px;
+            }
+
+            p {
+                font-size: 17px;
+                line-height: 1.9;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+    </div>
+
+    <main>
+
+        <div class="container">
+
+            <a href="ueber-dich.html" class="back">
+                ← Zurück
+            </a>
+
+            <div class="content">
+
+                <div class="icon">
+                    ✨
+                </div>
+
+                <h1>
+                    Deine <span>Art</span>
+                </h1>
+
+                <p>
+                    Ich glaube, es ist gar nicht eine einzige Sache,
+                    die dich besonders macht. Es ist einfach die Kombination
+                    aus deiner Art, deinem Humor und der Art, wie du mit
+                    anderen Menschen umgehst. Du bist jemand, der anderen
+                    gerne etwas Gutes tut und sich ehrlich darüber freut,
+                    wenn es anderen gut geht. Und genau deshalb bist du
+                    einfach ein toller Mensch.
+                </p>
+
+                <a href="ueber-dich.html" class="next">
+                    ← Zurück zu „Über dich“
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
+```
