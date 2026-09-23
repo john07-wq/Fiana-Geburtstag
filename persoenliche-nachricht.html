@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Eine Nachricht für dich ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "DM Sans", sans-serif;
+            background: #0d0d12;
+            color: white;
+        }
+
+        .background {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .glow {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.18;
+        }
+
+        .glow-one {
+            background: #ff4f81;
+            top: -200px;
+            left: -150px;
+        }
+
+        .glow-two {
+            background: #8b5cf6;
+            bottom: -250px;
+            right: -150px;
+        }
+
+        main {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 750px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 50px;
+            color: #9999a8;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back:hover {
+            color: white;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.045);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 28px;
+            padding: 50px;
+        }
+
+        .icon {
+            font-size: 42px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(40px, 7vw, 65px);
+            line-height: 1.1;
+            margin-bottom: 35px;
+        }
+
+        h1 span {
+            color: #ff6f9d;
+        }
+
+        .message {
+            color: #c7c7d1;
+            font-size: 19px;
+            line-height: 2;
+        }
+
+        .message p {
+            margin-bottom: 25px;
+        }
+
+        .next {
+            display: inline-flex;
+            margin-top: 25px;
+            padding: 15px 28px;
+            border-radius: 50px;
+            background: #ff5f8f;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .next:hover {
+            transform: translateY(-3px);
+            background: #ff719d;
+            box-shadow: 0 10px 30px rgba(255, 95, 143, 0.25);
+        }
+
+        @media (max-width: 600px) {
+
+            main {
+                padding: 25px 18px;
+            }
+
+            .back {
+                margin-bottom: 30px;
+            }
+
+            .content {
+                padding: 30px 24px;
+                border-radius: 22px;
+            }
+
+            .message {
+                font-size: 17px;
+                line-height: 1.9;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+    </div>
+
+
+    <main>
+
+        <div class="container">
+
+            <a href="ueber-dich.html" class="back">
+                ← Zurück
+            </a>
+
+
+            <div class="content">
+
+                <div class="icon">
+                    ❤️
+                </div>
+
+                <h1>
+                    Eine Nachricht <span>für dich</span>
+                </h1>
+
+
+                <div class="message">
+
+                 
+
+                    <p>
+                        Hey Fiana, ich wünsche dir alles alles gute zum Geburtstag.
+						Erstmal hoffe ich, dass dir so ein Geschenk gefällt, weil das schon eigenartig ist,
+						aber was anderes ist mir nicht eingefallen und ich dachte mir ich benutze einfach
+						meine Skills dafür xD. Wie du schon gelesen hast gibt es so viel was ich mag an dir
+						und ich möchte dir einfach sagen wie unglaublich toll ich dich finde.
+						Wir kennen uns nicht soo lange, aber das hält mich nicht davon ab dich toll zu finden.
+						Du gibst mir das Gefühl wirklich etwas besonderes zu sein und so akzeptiert zu werden, wie ich bin.
+						Ich finde dich so süß und ich verbringe sehr gerne Zeit mit dir.
+						Egal ob wir Fortnite zocken oder Drogen verkaufen in Schedule oder auch einfach nur plaudern.
+						Ich freue mich jedes mal über deine Nachrichten und wenn du mir dinge erzählst.
+						Auch wenn wir uns noch nicht persönlich gesehen haben, bist du für mich sehr wichtig geworden.
+						Ich habe dich echt schnell in mein Herz geschlossen. 
+						Außerdem hoffe ich, dass du heute einen wunderschönen Geburtstag hast und ihn genießen kannst.
+						Ich wünsche dir weiterhin Viel Glück, Viel Spaß und das du glücklich bist.
+						
+                    </p>
+
+                    <p>
+                       Ich bin wirklich froh das ich dich kennengelernt habe, und hoffe das noch mehr schöne Momente dazukommen.
+					   Bleib bitte genauso, wie du bist. ❤️
+                    </p>
+
+                    <p>
+                        Dein John️ ❤️
+                    </p>
+
+                </div>
+
+
+                <a href="index.html" class="next">
+                    Zurück zur Startseite ❤️
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Für dich ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "DM Sans", sans-serif;
+            background: #0d0d12;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Hintergrund */
+
+        .background {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .glow {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.18;
+        }
+
+        .glow-one {
+            background: #ff4f81;
+            top: -200px;
+            left: -150px;
+        }
+
+        .glow-two {
+            background: #8b5cf6;
+            bottom: -250px;
+            right: -150px;
+        }
+
+        /* Hauptbereich */
+
+        main {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 850px;
+            text-align: center;
+        }
+
+        .small-text {
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #b8b8c5;
+            margin-bottom: 20px;
+            animation: fadeUp 1s ease forwards;
+        }
+
+        h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(48px, 9vw, 90px);
+            font-weight: 600;
+            line-height: 1.05;
+            margin-bottom: 25px;
+            animation: fadeUp 1s ease 0.15s both;
+        }
+
+        h1 span {
+            color: #ff6f9d;
+        }
+
+        .intro {
+            max-width: 600px;
+            margin: 0 auto;
+            color: #c7c7d1;
+            font-size: 17px;
+            line-height: 1.8;
+            animation: fadeUp 1s ease 0.3s both;
+        }
+
+        /* Karte */
+
+        .message-card {
+            margin: 45px auto 35px;
+            max-width: 650px;
+            padding: 35px;
+            background: rgba(255, 255, 255, 0.045);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 24px;
+            backdrop-filter: blur(15px);
+            animation: fadeUp 1s ease 0.45s both;
+        }
+
+        .message-card p {
+            color: #d8d8df;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .message-card .heart {
+            display: block;
+            font-size: 30px;
+            margin-bottom: 15px;
+            animation: heartbeat 2s infinite;
+        }
+
+        /* Button */
+
+        .surprise-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 28px;
+            border: none;
+            border-radius: 50px;
+            background: #ff5f8f;
+            color: white;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s ease;
+            animation: fadeUp 1s ease 0.6s both;
+        }
+
+        .surprise-button:hover {
+            transform: translateY(-3px);
+            background: #ff719d;
+            box-shadow: 0 10px 30px rgba(255, 95, 143, 0.25);
+        }
+
+        /* Überraschung */
+
+        .hidden-message {
+            max-width: 600px;
+            margin: 30px auto 0;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            display: none;
+        }
+
+        .hidden-message.show {
+            display: block;
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        .hidden-message p {
+            color: #d8d8df;
+            line-height: 1.8;
+        }
+
+        /* Animationen */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        /* Handy */
+
+        @media (max-width: 600px) {
+
+            main {
+                padding: 30px 18px;
+            }
+
+            .message-card {
+                padding: 25px 20px;
+                margin-top: 35px;
+            }
+
+            .intro {
+                font-size: 16px;
+            }
+
+            .message-card p {
+                font-size: 15px;
+            }
+
+            .glow {
+                width: 350px;
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+    </div>
+
+    <main>
+
+        <div class="container">
+
+            <p class="small-text">
+                Eine kleine Überraschung für dich
+            </p>
+
+            <h1>
+                Happy Birthday <span>❤️</span>
+            </h1>
+
+            <p class="intro">
+                Heute geht es ausnahmsweise mal nur um dich.
+                Und weil ich dir leider nichts persönlich überreichen kann,
+                habe ich mir etwas anderes überlegt.
+            </p>
+
+            <div class="message-card">
+
+                <span class="heart">♡</span>
+
+                <p>
+                    Ich wollte dir nicht einfach nur „Happy Birthday“
+                    schreiben oder dir irgendeinen Gutschein schicken.
+                    Deshalb habe ich mir ein bisschen Zeit genommen,
+                    um etwas ganz Persönliches für dich zu machen.
+                </p>
+
+            </div>
+
+            <a href="ueber-dich.html" class="surprise-button">
+    Deine Überraschung entdecken
+    <span>→</span>
+</a>
+
+</body>
+</html>

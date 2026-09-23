@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Über dich ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "DM Sans", sans-serif;
+            background: #0d0d12;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .background {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .glow {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.18;
+        }
+
+        .glow-one {
+            background: #ff4f81;
+            top: -200px;
+            left: -150px;
+        }
+
+        .glow-two {
+            background: #8b5cf6;
+            bottom: -250px;
+            right: -150px;
+        }
+
+        main {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 60px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 850px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 60px;
+            color: #9999a8;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .back:hover {
+            color: white;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        .small-text {
+            font-size: 14px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #b8b8c5;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(45px, 8vw, 78px);
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        h1 span {
+            color: #ff6f9d;
+        }
+
+        .intro {
+            max-width: 620px;
+            margin: 0 auto;
+            color: #c7c7d1;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 55px;
+        }
+
+        .card {
+            display: block;
+            padding: 30px 25px;
+            background: rgba(255, 255, 255, 0.045);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            border-radius: 22px;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.07);
+            border-color: rgba(255, 111, 157, 0.3);
+        }
+
+        .card-icon {
+            font-size: 30px;
+            margin-bottom: 18px;
+        }
+
+        .card h2 {
+            font-size: 19px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #aaaab7;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .card-arrow {
+            display: block;
+            margin-top: 18px;
+            color: #ff6f9d;
+            font-size: 14px;
+        }
+
+        .personal {
+            margin-top: 25px;
+            padding: 35px 30px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+        }
+
+        .personal .heart {
+            display: block;
+            font-size: 28px;
+            margin-bottom: 18px;
+        }
+
+        .personal p {
+            color: #c7c7d1;
+            line-height: 1.9;
+            font-size: 15px;
+        }
+
+        .message-button {
+            display: inline-flex;
+            margin-top: 25px;
+            padding: 15px 28px;
+            border-radius: 50px;
+            background: #ff5f8f;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .message-button:hover {
+            transform: translateY(-3px);
+            background: #ff719d;
+            box-shadow: 0 10px 30px rgba(255, 95, 143, 0.25);
+        }
+
+        @media (max-width: 600px) {
+
+            main {
+                padding: 35px 18px;
+            }
+
+            .back {
+                margin-bottom: 45px;
+            }
+
+            .intro {
+                font-size: 16px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+                margin-top: 40px;
+            }
+
+            .card {
+                padding: 25px 22px;
+            }
+
+            .card p {
+                font-size: 15px;
+            }
+
+            .personal {
+                padding: 28px 22px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="background">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+    </div>
+
+
+    <main>
+
+        <div class="container">
+
+            <a href="index.html" class="back">
+                ← Zurück
+            </a>
+
+
+            <div class="header">
+
+                <p class="small-text">
+                    Ein paar Worte über dich
+                </p>
+
+                <h1>
+                    Weil du <span>besonders</span> bist.
+                </h1>
+
+                <p class="intro">
+                    Es gibt so viele kleine Dinge, die ich an dir mag.
+                    Deshalb habe ich sie ein bisschen aufgeteilt. ❤️
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <a href="gespraeche.html" class="card">
+
+                    <div class="card-icon">
+                        💬
+                    </div>
+
+                    <h2>
+                        Unsere Gespräche
+                    </h2>
+
+                    <p>
+                        Von absoluter Scheiße bis zum Deeptalk.
+                    </p>
+
+                    <span class="card-arrow">
+                        Mehr lesen →
+                    </span>
+
+                </a>
+
+
+                <a href="was-ich-mag.html" class="card">
+
+                    <div class="card-icon">
+                        🫶
+                    </div>
+
+                    <h2>
+                        Was ich an dir mag
+                    </h2>
+
+                    <p>
+                        Ein paar Dinge, die dich für mich besonders machen.
+                    </p>
+
+                    <span class="card-arrow">
+                        Mehr lesen →
+                    </span>
+
+                </a>
+
+
+                <a href="unser-humor.html" class="card">
+
+                    <div class="card-icon">
+                        😂
+                    </div>
+
+                    <h2>
+                        Unser Humor
+                    </h2>
+
+                    <p>
+                        Gegenseitiges Ärgern und viel zu viel Blödsinn.
+                    </p>
+
+                    <span class="card-arrow">
+                        Mehr lesen →
+                    </span>
+
+                </a>
+
+
+                <a href="deine-art.html" class="card">
+
+                    <div class="card-icon">
+                        ✨
+                    </div>
+
+                    <h2>
+                        Deine Art
+                    </h2>
+
+                    <p>
+                        Was dich als Mensch für mich so besonders macht.
+                    </p>
+
+                    <span class="card-arrow">
+                        Mehr lesen →
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <div class="personal">
+
+                <span class="heart">
+                    ♡
+                </span>
+
+                <p>
+                    Und wenn du alles gelesen hast, gibt es noch
+                    etwas, das ich dir ganz persönlich sagen möchte.
+                </p>
+
+                <a href="persoenliche-nachricht.html" class="message-button">
+                    Eine Nachricht für dich ❤️
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
+```
